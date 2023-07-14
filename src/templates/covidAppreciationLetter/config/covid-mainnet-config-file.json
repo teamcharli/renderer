@@ -1,0 +1,60 @@
+{
+  "network": "homestead",
+  "wallet": "<wallet address>",
+  "forms": [
+    {
+      "name": "Covid Appreciation Letter",
+      "type": "VERIFIABLE_DOCUMENT",
+      "defaults": {
+        "$template": {
+          "type": "EMBEDDED_RENDERER",
+          "name": "COVID_LETTER_OF_APPRECIATION_2021",
+          "url": "https://govtech-renderer.openattestation.com/"
+        },
+        "issuers": [
+          {
+            "name": "GovTech Singapore",
+            "documentStore": "0x6972154AdA6c67e38A2e1cd5C68949086c2C2068",
+            "identityProof": {
+              "type": "DNS-TXT",
+              "location": "hr.tech.gov.sg"
+            }
+          }
+        ],
+        "recipient": {
+          "name": "[Employee Full Name]",
+          "firstName": "[Employee First Name]",
+          "division": "[Employee Division]"
+        },
+        "issuedOn": "[Date]"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "recipient": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Employee's Fullname"
+              },
+              "firstName": {
+                "type": "string",
+                "title": "Employee's Firstname"
+              },
+              "division": {
+                "type": "string",
+                "title": "Division"
+              }
+            }
+          },
+          "issuedOn": {
+            "type": "string",
+            "title": "Date"
+          }
+        }
+      },
+      "headers": ["recipient.name", "recipient.firstName", "recipient.division", "issuedOn"]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { CertificateOfServiceTemplate } from "./template";
+import { CertificateOfServiceSampleData } from "./fixtures/sample";
+
+<Meta title="MINDEF|COS" component={CertificateOfServiceTemplate} />
+
+# CertificateOfServiceTemplate component
+
+<Description of={CertificateOfServiceTemplate} />
+
+# Props
+
+<Props of={CertificateOfServiceTemplate} />
+
+# Usage
+
+<Preview>
+  <Story name="Certificate of Service">
+    <CertificateOfServiceTemplate document={object("document", CertificateOfServiceSampleData)} />
+  </Story>
+</Preview>

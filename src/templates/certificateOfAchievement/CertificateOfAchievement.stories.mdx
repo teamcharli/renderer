@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { CertificateOfAchievement } from "./certificateOfAchievement";
+import { sampleCertificate } from "./fixtures/sample";
+
+<Meta title="MDX|CertificateOfAchievementTemplate" component={CertificateOfAchievement} />
+
+# CertificateOfAchievement component
+
+<Description of={CertificateOfAchievement} />
+
+# Props
+
+<Props of={CertificateOfAchievement} />
+
+# Usage
+
+<Preview>
+  <Story name="Certificate of Achievement">
+    <CertificateOfAchievement document={object("document", sampleCertificate)} />
+  </Story>
+</Preview>

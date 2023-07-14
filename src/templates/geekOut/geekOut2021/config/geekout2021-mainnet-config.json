@@ -1,0 +1,50 @@
+{
+  "network": "homestead",
+  "wallet": "<wallet address>",
+  "forms": [
+    {
+      "name": "GeekOut Certificate 2021",
+      "type": "VERIFIABLE_DOCUMENT",
+      "defaults": {
+        "$template": {
+          "type": "EMBEDDED_RENDERER",
+          "name": "GEEK_OUT_2021",
+          "url": "https://govtech-renderer.openattestation.com/"
+        },
+        "issuers": [
+          {
+            "name": "GovTech Singapore",
+            "documentStore": "0x6972154AdA6c67e38A2e1cd5C68949086c2C2068",
+            "identityProof": {
+              "type": "DNS-TXT",
+              "location": "hr.tech.gov.sg"
+            }
+          }
+        ],
+        "recipient": {
+          "name": "[Recipient Full Name]"
+        },
+        "type": "[(champion / runner-up / completion)]"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "recipient": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Receiver's Fullname"
+              }
+            }
+          },
+          "type": {
+            "type": "string",
+            "title": "Certificate Type"
+          }
+        }
+      },
+      "extension": "opencert"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { GeekOut2021 } from "./geekOut2021";
+import { championSampleCertificate, runnerupSampleCertificate, completionSampleCertificate } from "./fixtures/sample";
+
+<Meta title="GeekOut|2021" component={GeekOut2021} />
+
+# GeekOut2021 component
+
+<Description of={GeekOut2021} />
+
+# Props
+
+<Props of={GeekOut2021} />
+
+# Usage
+
+<Preview>
+  <Story name="Champion Certificate">
+    <GeekOut2021 document={object("document", championSampleCertificate)} />
+  </Story>
+  <Story name="RunnerUp Certificate">
+    <GeekOut2021 document={object("document", runnerupSampleCertificate)} />
+  </Story>
+  <Story name="Completion Certificate">
+    <GeekOut2021 document={object("document", completionSampleCertificate)} />
+  </Story>
+</Preview>

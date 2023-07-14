@@ -1,0 +1,22 @@
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { GeekOut2020 } from "./geekOut2020";
+import { sampleCertificate } from "./fixtures/sample";
+
+<Meta title="GeekOut|2020" component={GeekOut2020} />
+
+# GeekOut2020 component
+
+<Description of={GeekOut2020} />
+
+# Props
+
+<Props of={GeekOut2020} />
+
+# Usage
+
+<Preview>
+  <Story name="Certificate">
+    <GeekOut2020 document={object("document", sampleCertificate)} />
+  </Story>
+</Preview>
